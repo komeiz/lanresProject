@@ -8,6 +8,7 @@ body{
     font-size: 1.0em;
     position: relative;
     color:#736b6b;
+    width: 100%;
 
 }
 
@@ -26,11 +27,15 @@ h1,h3{
 }
 
 .logo{
-  width:30%;
+  /* width:30%; */
+  flex-grow: 2;
+  flex-shrink:1;
   padding-left:30px;
 }
 .navbar1{
-  width:70%
+  /* width:70% */
+  flex-grow: 2;
+  flex-shrink: 2;
 }
 
   ul>li{
@@ -280,4 +285,128 @@ justify-content: space-around;
 }
 .lst-f> p{
   background-color: grey;
+}
+/* mediaaaaaaaaaaaaaaaaaaaaaaaa queries */
+@media (max-width:1155px) {
+body{
+  width: 100%;
+}
+
+  .navg-bartop{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* justify-content: space-between; */
+  }
+
+
+  .navbar11>ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .navbar11>ul>li{
+      padding-top:10px;
+  }
+
+
+  .head1>h1{
+      font-weight:200;
+  }
+  .navbar2{
+    display:flex;
+    flex-direction: column;
+  }
+  .navbar22{
+    width: 100%;
+
+  }
+  .navbar22>ul {
+      text-align: center;
+    padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+.timeline{
+  position: relative;
+}
+    .calendar-flexb {
+     height: 370px;
+    display: flex;
+    margin-top: 90px;
+}
+.julyM{
+  position: absolute;
+  text-align: center;
+}
+  .septM,.augustM{
+    visibility: hidden;
+    margin: 0;
+  }
+  .prfname-mg-bn {
+    /* max-width: 1250px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar22>ul>li {
+    display: inline;
+    color: white;
+    padding: 20px 30px 20px 50px;
+    /* padding-left: 70px;*/
+}
+
+
+.septM, .augustM {
+    visibility: hidden;
+    margin: 0;
+    position: absolute;
+  }
+
+.pp{
+
+  visibility: hidden;
+}
+
+}
+
+@media (max-width:768px) {
+body{
+  width:100%;
+
+}
+  .pp
+  {
+    left: 0px;
+    right: 300px;
+    top: 0
+    bottom: px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 45px 45px 45px 45px 45px 45px 45px;
+    grid-template-rows: 40px 50px 50px 50px 50px 50px;
+     column-gap: 0px;
+
+     }
+
+     .abt-cnct {
+    /* max-width: 1200px; */
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    padding-left:20px;
+}
+
+.btn2 {
+
+margin-left: 0px;
+margin-top:10px;
+
+
+
 }
