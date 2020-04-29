@@ -2,6 +2,11 @@
     box-sizing: border-box;
     font-family:arial;
 }
+html,body{
+  width:100%;
+  height:100%;
+  margin:0;
+}
 
 body{
   margin: 0;
@@ -16,37 +21,64 @@ h1,h3{
   color:#5d5959;
 }
 /* doneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee */
-
-.navg-bartop{
-  width:100%;
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-    padding: 15px;
-}
-
 .logo{
-  /* width:30%; */
-  flex-grow: 2;
-  flex-shrink:1;
-  padding-left:30px;
-}
-.navbar1{
-  /* width:70% */
-  flex-grow: 2;
-  flex-shrink: 2;
+  position: absolute;
 }
 
-  ul>li{
-    list-style-type: none;
+.nav{
+  /* border-bottom: 1px solid blue; */
+  text-align: right;
+  height:70px;
+  line-height: 70px;
 }
-.navbar11>ul{
-  display:flex;
-  justify-content: space-around;
-    align-items: flex-end;
-    /* padding:10px; */
+
+
+.menu{
+  margin:0 30px 0 0;
 }
+
+.menu a{
+  color:#353231;
+  clear: right;
+  text-decoration: none;
+  margin: 0 30px;
+  line-height: 70px;
+}
+
+span{
+  color:green;
+}
+
+label{
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height:76px;
+  display: none;
+  width:26px;
+  float: right;
+}
+
+#toggle{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* doneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee */
 
 
@@ -54,12 +86,12 @@ h1,h3{
   background-image: url(images/image1.jpeg);
     min-height: 600px;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    width:100%;
     background-position: center;
     background-size: cover;
     position: relative;
     overflow: hidden; */
-    z-index: -100; */
+
 }
 /* doneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee */
 
@@ -287,6 +319,42 @@ justify-content: space-around;
   background-color: grey;
 }
 /* mediaaaaaaaaaaaaaaaaaaaaaaaa queries */
+
+@media (max-width:1300px) {
+  label{
+    display: block;
+    cursor: pointer;
+  }
+  .menu{
+    width: 100%;
+    display: none;
+  }
+
+  .menu a{
+    background-color: #353232;
+    display: block;
+    padding-left:10px;
+    margin: 0;
+    text-align: left;
+    color:white;
+    z-index: 100000000;
+  }
+  .menu a:hover{
+    background-color:#ea9a07;
+  }
+
+  #toggle:checked + .menu{
+    display: block;
+  }
+
+  .profile-picture{
+    /* min-height:400px; */
+  z-index: -1;
+
+  }
+
+}
+
 @media (max-width:1155px) {
 body{
   width: 100%;
@@ -372,7 +440,27 @@ body{
   visibility: hidden;
 }
 
+
 }
+
+
+
+
+@media (max-width:1360px) {
+
+  .pp {
+    left: 140px;
+    right: 0;
+    top: 600px;
+    bottom: px;
+    position: absolute;
+    height: 200px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+}
+
 
 @media (max-width:768px) {
 body{
@@ -407,6 +495,14 @@ body{
 margin-left: 0px;
 margin-top:10px;
 
+}
+
+
+@media (max-width:320px) {
+
+label{
+  margin-right:9px;
+}
 
 
 }
